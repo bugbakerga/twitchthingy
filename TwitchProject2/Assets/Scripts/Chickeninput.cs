@@ -83,14 +83,9 @@ public class Chickeninput : MonoBehaviour
     {
         if(playername == namestring)
         {
-            if (ChatInputs.ToLower() == "!fight")
+            if (ChatInputs.ToLower() == "!boost")
             {
                 controller.fight();
-            }
-
-            if (ChatInputs.ToLower() == "!retreat")
-            {
-                controller.retreat();
             }
         }
     }

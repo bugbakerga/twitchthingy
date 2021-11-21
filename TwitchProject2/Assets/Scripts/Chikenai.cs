@@ -6,8 +6,7 @@ using UnityEngine.AI;
 public class Chikenai : MonoBehaviour
 {
     public NavMeshAgent agent;
-
-    public GameObject[] player;
+    public Animator overheadtext;
 
     public LayerMask whatIsGround;
 
@@ -18,8 +17,15 @@ public class Chikenai : MonoBehaviour
 
     //States
     public bool isStarted = false;
-    public bool isfighting = false;
-    public int randomchase;
+    public bool isfighting = true;
+
+    //particles
+    public GameObject redptc;
+    public GameObject whiteptc;
+
+    //gfx objects
+    public GameObject chickengfx;
+    public Material[] chickencolors;
 
 
     private void Awake()
@@ -29,27 +35,26 @@ public class Chikenai : MonoBehaviour
 
     public void beginmatch()
     {
-        player = GameObject.FindGameObjectsWithTag("Chicken");
         isStarted = true;
-    }
-
-    public void retreat()
-    {
-        isfighting = false;
     }
 
     public void fight()
     {
-        isfighting = true;
-        randomchase = Random.Range(0, player.Length);
+        if(isfighting == true)
+        {
+            isfighting = false;
+            Boost();
+            overheadtext.SetBool("isrecharged", false);
+            Instantiate(redptc, transform.position, Quaternion.identity);
+            chickengfx.GetComponent<Renderer>().material = chickencolors[1];
+        }
     }
 
     private void Update()
     {
         if (isStarted == true)
         {
-            if (!isfighting) Patroling();
-            if (isfighting) ChasePlayer(randomchase);
+            Patroling();
         }
     }
 
@@ -79,21 +84,25 @@ public class Chikenai : MonoBehaviour
             walkPointSet = true;
     }
 
-   
-    private void ChasePlayer(int chickenid)
+    private void Boost()
     {
-        if (player[chickenid] != this.gameObject)
-        {
-            agent.SetDestination(player[chickenid].transform.position);
-        } 
-        else
-        {
-            randomchase = Random.Range(0, player.Length);
-        }
+        agent.speed = 8.7f;
+        StartCoroutine(speedup());
     }
 
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
+    }
+
+    IEnumerator speedup()
+    {
+        yield return new WaitForSeconds(3f);
+        agent.speed = 3.5f;
+        Instantiate(whiteptc, transform.position, Quaternion.identity);
+        chickengfx.GetComponent<Renderer>().material = chickencolors[0];
+        yield return new WaitForSeconds(10f);
+        isfighting = true;
+        overheadtext.SetBool("isrecharged", true);
     }
 }

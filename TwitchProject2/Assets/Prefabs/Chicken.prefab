@@ -274,8 +274,9 @@ GameObject:
   - component: {fileID: 1109103242020736512}
   - component: {fileID: 1109103242020736514}
   - component: {fileID: 1109103242020736513}
+  - component: {fileID: 7065505344364001230}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: Playertext
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -419,6 +420,25 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!95 &7065505344364001230
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109103242020736527}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4523f7b38f31a89419359662d820e9f4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1109103242202059249
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,7 +455,7 @@ GameObject:
   - component: {fileID: 1109103242202059254}
   m_Layer: 0
   m_Name: Chicken
-  m_TagString: Untagged
+  m_TagString: Chiken
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -538,12 +558,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 1109103242202059252}
-  player: []
+  overheadtext: {fileID: 7065505344364001230}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 512
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
   isStarted: 0
-  isfighting: 0
-  randomchase: 0
+  isfighting: 1
+  redptc: {fileID: 7610638335457775037, guid: 9384b26ace48e9f47a02b347d789f853, type: 3}
+  whiteptc: {fileID: 4377178035379491193, guid: 32b4895e1dd22b540b82650feef95746,
+    type: 3}
+  chickengfx: {fileID: 1109103241249867405}
+  chickencolors:
+  - {fileID: 2100000, guid: 173c8d1d40d88db4aa1578e64158d66f, type: 2}
+  - {fileID: 2100000, guid: 811af0db76478b04881e4e96f0f228b5, type: 2}
