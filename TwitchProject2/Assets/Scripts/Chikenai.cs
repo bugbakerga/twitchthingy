@@ -26,6 +26,7 @@ public class Chikenai : MonoBehaviour
     //gfx objects
     public GameObject chickengfx;
     public Material[] chickencolors;
+    public Animator chickenanims;
 
 
     private void Awake()
@@ -55,6 +56,7 @@ public class Chikenai : MonoBehaviour
         if (isStarted == true)
         {
             Patroling();
+            chickenanims.SetBool("iswalking", true);
         }
     }
 
