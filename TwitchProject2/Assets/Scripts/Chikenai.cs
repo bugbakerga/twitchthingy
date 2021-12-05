@@ -51,6 +51,11 @@ public class Chikenai : MonoBehaviour
         }
     }
 
+    public void attackplayer()
+    {
+        chickenanims.SetTrigger("attack");
+    }
+
     private void Update()
     {
         if (isStarted == true)
@@ -89,7 +94,13 @@ public class Chikenai : MonoBehaviour
     private void Boost()
     {
         agent.speed = 8.7f;
+        chickenanims.speed = 2f;
         StartCoroutine(speedup());
+    }
+
+    public void takedamage()
+    {
+        return;
     }
 
     void OnDrawGizmosSelected()
@@ -103,6 +114,7 @@ public class Chikenai : MonoBehaviour
         agent.speed = 3.5f;
         Instantiate(whiteptc, transform.position, Quaternion.identity);
         chickengfx.GetComponent<Renderer>().material = chickencolors[0];
+        chickenanims.speed = 1f;
         yield return new WaitForSeconds(10f);
         isfighting = true;
         overheadtext.SetBool("isrecharged", true);
