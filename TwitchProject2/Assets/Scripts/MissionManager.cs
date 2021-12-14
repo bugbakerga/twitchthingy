@@ -24,6 +24,9 @@ public class MissionManager : MonoBehaviour
     public int randomnumber;
 
     bool inMission;
+    public GameObject endprize;
+    public GameObject endprizeptc;
+    public Transform prizespawn;
 
     void Start()
     {
@@ -44,6 +47,7 @@ public class MissionManager : MonoBehaviour
         else
         {
             hype = maxHype;
+            resetHype();
         }
     }
 
@@ -65,9 +69,18 @@ public class MissionManager : MonoBehaviour
         baranim.SetBool("isopen", true);
     }
 
+    public void resetHype()
+    {
+        Instantiate(endprize, prizespawn.position, Quaternion.identity);
+        Instantiate(endprizeptc, prizespawn.position, Quaternion.identity);
+        hype = 0f;
+        baranim.SetBool("isopen", false);
+        StartCoroutine(missiondelay());
+    }
+
     IEnumerator missiondelay ()
     {
-        yield return new WaitForSeconds(9f);
+        yield return new WaitForSeconds(10f);
         BeginMission();
     }
 }
