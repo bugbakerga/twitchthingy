@@ -68,9 +68,9 @@ public class prizeMovement : MonoBehaviour
         animator.SetTrigger("patrol");
         yield return new WaitForSeconds(randomtime);
         animator.SetTrigger("despawn");
-        yield return new WaitForSeconds(0.26f);
-        Instantiate(prizeobjects[randomprize], transform.position, Quaternion.identity);
         yield return new WaitForSeconds(0.1f);
+        Instantiate(prizeobjects[randomprize], transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(0.3f);
         Destroy(gameObject);
     }
 
