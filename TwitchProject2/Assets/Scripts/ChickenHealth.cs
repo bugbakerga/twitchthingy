@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ChickenHealth : MonoBehaviour
 {
+    public bool invincible;
     public Image theFill;
 
     public float maxHealth;
@@ -26,18 +27,21 @@ public class ChickenHealth : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        if(health - damage > 0)
+        if(invincible == false)
         {
-            health -= damage;
-            chikengfx.SetTrigger("hit");
-            baranim.SetTrigger("hit");
-            speaker.PlayOneShot(clip);
-        }
-        else
-        {
-            health = 0;
-            Instantiate(blood, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            if (health - damage > 0)
+            {
+                health -= damage;
+                chikengfx.SetTrigger("hit");
+                baranim.SetTrigger("hit");
+                speaker.PlayOneShot(clip);
+            }
+            else
+            {
+                health = 0;
+                Instantiate(blood, transform.position, Quaternion.identity);
+                Destroy(gameObject);
+            }
         }
     }
 
@@ -46,6 +50,7 @@ public class ChickenHealth : MonoBehaviour
         if(health + increase <= maxHealth)
         {
             health += increase;
+            baranim.SetTrigger("hit");
         }
         else
         {

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class WinManager : MonoBehaviour
 {
     private int chickensLeft;
+    public bool gamestarted;
 
     GameObject[] chickens;
     public WinnerInfo winnerInfo;
@@ -18,11 +19,15 @@ public class WinManager : MonoBehaviour
 
     void Update()
     {
-        chickens = GameObject.FindGameObjectsWithTag("Chiken");
-        chickensLeft = chickens.Length;
-        if(chickensLeft < 2)
+        if(gamestarted == true)
         {
-            Winlevel();
+            chickens = GameObject.FindGameObjectsWithTag("Chiken");
+            chickensLeft = chickens.Length;
+            if (chickensLeft < 2)
+            {
+                chickens[0].gameObject.GetComponent<ChickenHealth>().invincible = true;
+                Winlevel();
+            }
         }
 
     }

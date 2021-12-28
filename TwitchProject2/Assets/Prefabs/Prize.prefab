@@ -4740,8 +4740,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 1b80d803cf1a0f74190454c433b5bed3, type: 2}
+  - {fileID: 2100000, guid: 1b80d803cf1a0f74190454c433b5bed3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5040,12 +5040,14 @@ MonoBehaviour:
   ismoving: 0
   walkPoint: {x: 0, y: 0, z: 0}
   speed: 2
-  walkPointRange: 5
+  walkPointRange: 4.5
   thelight: {fileID: 9209737227418040496}
   particle: {fileID: 1187828990710083714}
   animator: {fileID: 549629228701762562}
   prizeobjects:
   - {fileID: 4770477716086727122, guid: c998cd27ff29c31468170367407b739c, type: 3}
+  - {fileID: 3452629861468821617, guid: b3be2f060e9669c498f98d8ba8961344, type: 3}
+  - {fileID: 3452629861468821617, guid: b3be2f060e9669c498f98d8ba8961344, type: 3}
 --- !u!1001 &4823100614472369701
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5123,6 +5125,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 69.029594
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1dc402d2ad8f9d949954acec128f5061,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b51e52be90b0cce489d4d6241d8a6c19, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 1dc402d2ad8f9d949954acec128f5061,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 768a1f0e14c3c934c8e9cad16458ad54, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 1dc402d2ad8f9d949954acec128f5061,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: cd58f4c0731759c46abcef9a0170ff92, type: 2}
     - target: {fileID: 919132149155446097, guid: 1dc402d2ad8f9d949954acec128f5061,
         type: 3}
       propertyPath: m_Name
