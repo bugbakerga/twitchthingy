@@ -5,6 +5,9 @@ using UnityEngine;
 public class LaserLogic : MonoBehaviour
 {
     private LineRenderer lr;
+
+    public Transform hitbox;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +24,7 @@ public class LaserLogic : MonoBehaviour
             if(hit.collider)
             {
                 lr.SetPosition(1, hit.point);
+                hitbox.position = hit.point;
             }
         }
         else
