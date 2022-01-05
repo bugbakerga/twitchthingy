@@ -12,6 +12,8 @@ public class MatchStarter : MonoBehaviour
     GameObject[] chickens;
 
     public TextMeshProUGUI counter;
+    public GameObject counterobj;
+
     public TextMeshProUGUI countdown;
 
     public WinManager winManager;
@@ -31,6 +33,7 @@ public class MatchStarter : MonoBehaviour
         {
             iscountingdown = true;
             StartCoroutine(Countsequence());
+            counterobj.SetActive(false);
             counter.text = "";
         }
         else

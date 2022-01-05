@@ -4908,6 +4908,7 @@ GameObject:
   - component: {fileID: 4770477716086727120}
   - component: {fileID: 4770477716086727123}
   - component: {fileID: 4770477716086727135}
+  - component: {fileID: 1824040500182402080}
   m_Layer: 0
   m_Name: Reward1
   m_TagString: Untagged
@@ -5007,6 +5008,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &1824040500182402080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4770477716086727122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bbaa9993acbafd41a3ac3d586fc1403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameofprize: bomb
 --- !u!1001 &4770477715917190775
 PrefabInstance:
   m_ObjectHideFlags: 0

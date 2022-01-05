@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2872142664115519385}
   - component: {fileID: 6249834780910181061}
   - component: {fileID: 2895389590589009700}
+  - component: {fileID: 1342720186533946648}
   m_Layer: 0
   m_Name: fence
   m_TagString: Untagged
@@ -141,6 +142,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 443e1937b4e30144c80819c4a04726af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1342720186533946648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3452629861468821617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bbaa9993acbafd41a3ac3d586fc1403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameofprize: fence
 --- !u!1001 &3452629860931022525
 PrefabInstance:
   m_ObjectHideFlags: 0

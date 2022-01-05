@@ -4927,6 +4927,7 @@ GameObject:
   - component: {fileID: 4804820056815168193}
   - component: {fileID: 4804820056815168194}
   - component: {fileID: 4804820056815168198}
+  - component: {fileID: 1561306824368954906}
   m_Layer: 0
   m_Name: HealPrize
   m_TagString: Untagged
@@ -5027,6 +5028,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &1561306824368954906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4804820056815168195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bbaa9993acbafd41a3ac3d586fc1403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameofprize: heal
 --- !u!1001 &4804820056421981733
 PrefabInstance:
   m_ObjectHideFlags: 0
