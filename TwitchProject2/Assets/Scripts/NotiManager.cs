@@ -7,6 +7,8 @@ public class NotiManager : MonoBehaviour
 {
     public static NotiManager instance;
 
+    public CameraShaker cameraShaker;
+
     public TextMeshProUGUI deathbox;
 
     private void Awake()
@@ -17,6 +19,7 @@ public class NotiManager : MonoBehaviour
     public void addNotification(string user)
     {
         deathbox.text = deathbox.text + "\n" + user + " has perished!";
+        cameraShaker.ShakeSmall();
     }
 
     public void addAppearence(string prizename)

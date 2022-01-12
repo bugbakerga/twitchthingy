@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Camera))]
 public class MultipleTargetCamera : MonoBehaviour
 {
     public GameObject[] targets;
@@ -17,12 +16,8 @@ public class MultipleTargetCamera : MonoBehaviour
     public float maxZoom = 10f;
     public float zoomLimiter = 50f;
 
-    private Camera cam;
+    public Camera cam;
 
-    void Start()
-    {
-        cam = GetComponent<Camera>();
-    }
 
     void LateUpdate()
     {
