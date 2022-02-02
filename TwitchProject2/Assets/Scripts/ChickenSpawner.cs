@@ -83,10 +83,13 @@ public class ChickenSpawner : MonoBehaviour
     {
         if (ChatInputs.ToLower() == "!join")
         {
-            GameObject newchick = Instantiate(theChicken, spawnpoints[spawnnum].position, Quaternion.identity);
-            spawnnum += 1;
-            Chickeninput nameui = newchick.GetComponent<Chickeninput>();
-            nameui.namestring = thename;
+            if(spawnnum < 13)
+            {
+                GameObject newchick = Instantiate(theChicken, spawnpoints[spawnnum].position, Quaternion.identity);
+                spawnnum += 1;
+                Chickeninput nameui = newchick.GetComponent<Chickeninput>();
+                nameui.namestring = thename;
+            }
         }
     }
 }

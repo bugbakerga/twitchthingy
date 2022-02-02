@@ -28,7 +28,7 @@ public class MissionManager : MonoBehaviour
     public GameObject endprizeptc;
     public Transform prizespawn;
 
-    void Start()
+    public void startfirst()
     {
         StartCoroutine(missiondelay());
     }

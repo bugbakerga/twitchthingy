@@ -17,6 +17,7 @@ public class MatchStarter : MonoBehaviour
     public TextMeshProUGUI countdown;
 
     public WinManager winManager;
+    public MissionManager missionManager;
 
     // will soon be called or enabled on start of match
     void Start()
@@ -54,6 +55,7 @@ public class MatchStarter : MonoBehaviour
         countdown.text = "Go!";
         winManager.gamestarted = true;
         startchickens();
+        missionManager.startfirst();
         yield return new WaitForSeconds(1f);
         countdown.text = "";
     }
