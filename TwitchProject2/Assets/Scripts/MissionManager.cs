@@ -28,9 +28,13 @@ public class MissionManager : MonoBehaviour
     public GameObject endprizeptc;
     public Transform prizespawn;
 
+    AudioSource audioSource;
+    public AudioClip clip;
+
     public void startfirst()
     {
         StartCoroutine(missiondelay());
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
 
     public void BeginMission()
@@ -67,6 +71,7 @@ public class MissionManager : MonoBehaviour
         textDisplay.text = "Emote Mission: " + emote[randomnumber].emoteName;
         message.SetTrigger("mission");
         baranim.SetBool("isopen", true);
+        audioSource.PlayOneShot(clip);
     }
 
     public void resetHype()

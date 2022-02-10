@@ -8,7 +8,7 @@ public class WinManager : MonoBehaviour
     private int chickensLeft;
     public bool gamestarted;
 
-    bool particalspawned;
+    bool particalspawned = true;
 
     GameObject[] chickens;
     public WinnerInfo winnerInfo;
@@ -17,6 +17,8 @@ public class WinManager : MonoBehaviour
     public AudioClip clip;
 
     public GameObject winfx;
+
+    public GameObject fadeobject;
 
     // will soon be called or enabled on start of match
     void Start()
@@ -38,7 +40,7 @@ public class WinManager : MonoBehaviour
                 if (particalspawned == true)
                 {
                     particalspawned = false;
-     
+                    Instantiate(winfx, chickens[0].transform.position, Quaternion.identity);
                 }
             }
         }
@@ -48,7 +50,7 @@ public class WinManager : MonoBehaviour
     public void Winlevel()
     {
         winnerInfo.winnername = chickens[0].gameObject.GetComponent<Chickeninput>().username;
-        Instantiate(winfx, chickens[0].transform.position, Quaternion.identity);
+        fadeobject.SetActive(true);
         audioSource.PlayOneShot(clip);
         Time.timeScale = 0.4f;
         StartCoroutine(WinTime());
