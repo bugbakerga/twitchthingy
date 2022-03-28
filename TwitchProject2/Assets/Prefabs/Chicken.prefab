@@ -577,7 +577,7 @@ MonoBehaviour:
   chickengfx: {fileID: 3941622138645967709}
   chickencolors:
   - {fileID: 2100000, guid: 173c8d1d40d88db4aa1578e64158d66f, type: 2}
-  - {fileID: 2100000, guid: 811af0db76478b04881e4e96f0f228b5, type: 2}
+  - {fileID: 2100000, guid: c6d7db5a6c8227e4a8f32f29add97eef, type: 2}
   chickenanims: {fileID: 2177430644570756823}
 --- !u!114 &3714068342205552035
 MonoBehaviour:
@@ -1149,7 +1149,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c6d7db5a6c8227e4a8f32f29add97eef, type: 2}
+      objectReference: {fileID: 2100000, guid: 173c8d1d40d88db4aa1578e64158d66f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 137cab06ebe117b4193ec7391472694b, type: 3}
 --- !u!4 &2870468490955586415 stripped

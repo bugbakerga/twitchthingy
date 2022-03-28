@@ -11,6 +11,8 @@ public class NotiManager : MonoBehaviour
 
     public TextMeshProUGUI deathbox;
 
+    public Animator animator;
+
     private void Awake()
     {
         instance = this;
@@ -20,10 +22,12 @@ public class NotiManager : MonoBehaviour
     {
         deathbox.text = deathbox.text + "\n" + user + " has perished!";
         cameraShaker.ShakeSmall();
+        animator.SetTrigger("joined");
     }
 
     public void addAppearence(string prizename)
     {
         deathbox.text = deathbox.text + "\n" + "A " + prizename + " has appeared!" ;
+        animator.SetTrigger("joined");
     }
 }

@@ -18,6 +18,8 @@ public class ChickenSpawner : MonoBehaviour
     public int spawnnum;
     public GameObject theChicken;
 
+    public Animator animator;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -89,6 +91,12 @@ public class ChickenSpawner : MonoBehaviour
                 spawnnum += 1;
                 Chickeninput nameui = newchick.GetComponent<Chickeninput>();
                 nameui.namestring = thename;
+                animator.SetTrigger("joined");
+            }
+            
+            if(spawnnum == 12)
+            {
+                animator.SetBool("full", true);
             }
         }
     }
