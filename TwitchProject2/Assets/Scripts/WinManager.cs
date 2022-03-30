@@ -8,15 +8,11 @@ public class WinManager : MonoBehaviour
     private int chickensLeft;
     public bool gamestarted;
 
-    bool particalspawned = true;
-
     GameObject[] chickens;
     public WinnerInfo winnerInfo;
 
     AudioSource audioSource;
     public AudioClip clip;
-
-    public GameObject winfx;
 
     public GameObject fadeobject;
 
@@ -37,11 +33,6 @@ public class WinManager : MonoBehaviour
             {
                 chickens[0].gameObject.GetComponent<ChickenHealth>().invincible = true;
                 Winlevel();
-                if (particalspawned == true)
-                {
-                    particalspawned = false;
-                    Instantiate(winfx, chickens[0].transform.position, Quaternion.identity);
-                }
             }
         }
 
@@ -60,7 +51,7 @@ public class WinManager : MonoBehaviour
     {
         yield return new WaitForSeconds(4);
         Time.timeScale = 1f;
-        SceneManager.LoadScene(2);
+        SceneManager.LoadSceneAsync(2);
     }
 
 }

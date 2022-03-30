@@ -6,6 +6,18 @@ public class presstostart : MonoBehaviour
 {
     public GameObject blur;
     public GameObject loginmenu;
+    public GameObject dashboard;
+
+    #region Singleton
+
+    public static presstostart instance;
+
+    void Awake()
+    {
+        instance = this;
+    }
+
+    #endregion
 
     // Update is called once per frame
     void Update()
@@ -16,5 +28,13 @@ public class presstostart : MonoBehaviour
             loginmenu.SetActive(true);
             gameObject.SetActive(false);
         }
+    }
+
+    public void StraighttoDash()
+    {
+        blur.SetActive(true);
+        loginmenu.SetActive(true);
+        gameObject.SetActive(false);
+
     }
 }

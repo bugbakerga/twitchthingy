@@ -83,15 +83,35 @@ public class ChickenSpawner : MonoBehaviour
 
     private void GameInputs(string ChatInputs, string thename)
     {
-        if (ChatInputs.ToLower() == "!join")
+        if (ChatInputs.Contains("!join"))
         {
             if(spawnnum < 13)
             {
                 GameObject newchick = Instantiate(theChicken, spawnpoints[spawnnum].position, Quaternion.identity);
                 spawnnum += 1;
                 Chickeninput nameui = newchick.GetComponent<Chickeninput>();
+                CostumePicker costumepick = newchick.GetComponent<CostumePicker>();
                 nameui.namestring = thename;
                 animator.SetTrigger("joined");
+                if (ChatInputs.Contains("0"))
+                {
+                    costumepick.pickoutfit(0);
+                }
+
+                if (ChatInputs.Contains("1"))
+                {
+                    costumepick.pickoutfit(1);
+                }
+
+                if (ChatInputs.Contains("2"))
+                {
+                    costumepick.pickoutfit(2);
+                }
+
+                if (ChatInputs.Contains("3"))
+                {
+                    costumepick.pickoutfit(3);
+                }
             }
             
             if(spawnnum == 12)
