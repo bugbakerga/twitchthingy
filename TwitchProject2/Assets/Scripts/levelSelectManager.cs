@@ -10,6 +10,8 @@ public class levelSelectManager : MonoBehaviour
     public Image previousimage;
     public RawImage closeup;
 
+    public Text desctext;
+
     public int sceneselected = 1;
 
     void Start()
@@ -24,6 +26,7 @@ public class levelSelectManager : MonoBehaviour
         previousimage.color = buttonTint;
         sceneselected = info.scenenum;
         closeup.texture = info.mappreview;
+        desctext.text = info.description;
     }
 
     public void PlayMatch()

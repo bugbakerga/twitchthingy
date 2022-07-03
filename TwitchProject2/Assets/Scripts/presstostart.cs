@@ -30,11 +30,4 @@ public class presstostart : MonoBehaviour
         }
     }
 
-    public void StraighttoDash()
-    {
-        blur.SetActive(true);
-        loginmenu.SetActive(true);
-        gameObject.SetActive(false);
-
-    }
 }

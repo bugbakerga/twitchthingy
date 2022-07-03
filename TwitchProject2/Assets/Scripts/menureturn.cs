@@ -7,6 +7,17 @@ public class menureturn : MonoBehaviour
 {
     public void backtomenu()
     {
-        SceneManager.LoadSceneAsync(0);
+        SceneManager.LoadSceneAsync(3);
+    }
+
+    public void todashboard()
+    {
+        StartCoroutine(delaytime());
+    }
+
+    IEnumerator delaytime()
+    {
+        yield return new WaitForSeconds(0.5f);
+        SceneManager.LoadSceneAsync(3);
     }
 }
