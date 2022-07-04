@@ -49,8 +49,9 @@ public class WinManager : MonoBehaviour
 
     IEnumerator WinTime()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(1);
         Time.timeScale = 1f;
+        yield return new WaitForSeconds(2);
         SceneManager.LoadSceneAsync(2);
     }
 
