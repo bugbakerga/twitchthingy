@@ -16,6 +16,7 @@ public class ChickenHealth : MonoBehaviour
     public Animator chikengfx;
 
     public GameObject blood;
+    public GameObject healfx;
     public Animator baranim;
 
     AudioSource speaker;
@@ -56,11 +57,14 @@ public class ChickenHealth : MonoBehaviour
         if(health + increase <= maxHealth)
         {
             health += increase;
-            baranim.SetTrigger("hit");
+            baranim.SetTrigger("heal");
+            Instantiate(healfx, transform.position, Quaternion.identity);
         }
         else
         {
             health = maxHealth;
+            baranim.SetTrigger("heal");
+            Instantiate(healfx, transform.position, Quaternion.identity);
         }
     }
 

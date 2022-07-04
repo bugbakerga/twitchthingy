@@ -600,6 +600,7 @@ MonoBehaviour:
   smoothspeed: 5
   chikengfx: {fileID: 2177430644570756823}
   blood: {fileID: 6375299244957875092, guid: 44c65f4b99bc4094abf21b34f40653e7, type: 3}
+  healfx: {fileID: 4397782428934085768, guid: 7ae8acb871a1de8459e0930e009d7123, type: 3}
   baranim: {fileID: 2285393282872862263}
   clip: {fileID: 8300000, guid: 66d0785bed31456489395cf9a1b9dd9a, type: 3}
 --- !u!82 &4113278311230404353
