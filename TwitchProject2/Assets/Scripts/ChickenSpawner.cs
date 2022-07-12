@@ -112,6 +112,16 @@ public class ChickenSpawner : MonoBehaviour
                 {
                     costumepick.pickoutfit(3);
                 }
+
+                if (ChatInputs.Contains("4"))
+                {
+                    costumepick.pickoutfit(4);
+                }
+
+                if (ChatInputs.Contains("5"))
+                {
+                    costumepick.pickoutfit(5);
+                }
             }
             
             if(spawnnum == 12)

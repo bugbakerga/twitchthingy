@@ -6,6 +6,8 @@ public class UIdelay : MonoBehaviour
 {
     public GameObject hubui;
 
+    public float delay = 4f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +16,7 @@ public class UIdelay : MonoBehaviour
 
     IEnumerator delaytime()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(delay);
         hubui.SetActive(true);
     }
 }

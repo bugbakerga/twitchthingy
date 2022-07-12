@@ -41,7 +41,6 @@ public class WinManager : MonoBehaviour
     public void Winlevel()
     {
         winnerInfo.winnername = chickens[0].gameObject.GetComponent<Chickeninput>().username;
-        fadeobject.SetActive(true);
         audioSource.PlayOneShot(clip);
         Time.timeScale = 0.4f;
         StartCoroutine(WinTime());
@@ -49,9 +48,11 @@ public class WinManager : MonoBehaviour
 
     IEnumerator WinTime()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         Time.timeScale = 1f;
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
+        fadeobject.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
         SceneManager.LoadSceneAsync(2);
     }
 
