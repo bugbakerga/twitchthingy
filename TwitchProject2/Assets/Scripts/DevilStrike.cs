@@ -10,6 +10,9 @@ public class DevilStrike : MonoBehaviour
     public GameObject lightningeffect;
     public GameObject damageObject;
 
+    public GameObject destroyeffect;
+    public GameObject parentobject;
+
     GameObject[] chickens;
 
     int randnum;
@@ -20,6 +23,8 @@ public class DevilStrike : MonoBehaviour
         {
             gameObject.GetComponent<BoxCollider>().enabled = false;
             animator.SetTrigger("power");
+            parentobject.gameObject.GetComponent<Rigidbody>().useGravity = false;
+            parentobject.gameObject.GetComponent<BoxCollider>().enabled = false;
             StartCoroutine(strike());
         }
     }
@@ -32,5 +37,8 @@ public class DevilStrike : MonoBehaviour
         Instantiate(damageObject, chickens[randnum].transform.position, Quaternion.identity);
         staffobject.LookAt(chickens[randnum].transform.position);
         lightningeffect.SetActive(true);
+        yield return new WaitForSeconds(2.5f);
+        Instantiate(destroyeffect, transform.position, Quaternion.identity);
+        Destroy(parentobject);
     }
 }
