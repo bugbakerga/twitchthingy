@@ -5566,7 +5566,7 @@ MonoBehaviour:
   animator: {fileID: 7597319716148524364}
   staffobject: {fileID: 3350316796142265411}
   lightningeffect: {fileID: 2330655920004188593}
-  damageObject: {fileID: 4770477716086727122, guid: c998cd27ff29c31468170367407b739c,
+  damageObject: {fileID: 5798411187329331844, guid: 5e64c5054d7d1f9498e5316babf80c4d,
     type: 3}
   destroyeffect: {fileID: 7610638335457775037, guid: 9384b26ace48e9f47a02b347d789f853,
     type: 3}

@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: laser_radiation
-  m_Shader: {fileID: -6465566751694194690, guid: 53916efe647ee0c42b4913ce2fb92578,
+  m_Name: lighningballtest
+  m_Shader: {fileID: -6465566751694194690, guid: 92a92a39cd9f9dd4d8e54c429ea7024c,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -20,10 +20,6 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - Texture2D_1D42A6A9:
-        m_Texture: {fileID: 2800000, guid: 5c2964d17b726164d8f309f29bd73df8, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -53,6 +49,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_473E50CF: 2
+    - Vector1_6423CBA6: 5
+    - Vector1_C4A6D6FB: 0.5
+    - Vector1_DFD47ABF: 9.43
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -75,13 +75,14 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_61453F29: {r: 4.9245777, g: 3.583855, b: 0, a: 1}
-    - Vector2_2590882A: {r: -10, g: 0, b: 0, a: 0}
+    - Color_1589988C: {r: 1.319508, g: 1.319508, b: 1.319508, a: 1}
+    - Vector2_682648B0: {r: 0.1, g: -0.5, b: 0, a: 0}
+    - Vector2_E0F426CA: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
---- !u!114 &4859845015254773390
+--- !u!114 &3590857124902802617
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
