@@ -93,32 +93,32 @@ public class ChickenSpawner : MonoBehaviour
                 CostumePicker costumepick = newchick.GetComponent<CostumePicker>();
                 nameui.namestring = thename;
                 animator.SetTrigger("joined");
-                if (ChatInputs.Contains("0"))
+                if (ChatInputs.ToLower() == "!join 0")
                 {
                     costumepick.pickoutfit(0);
                 }
 
-                if (ChatInputs.Contains("1"))
+                if (ChatInputs.ToLower() == "!join 1")
                 {
                     costumepick.pickoutfit(1);
                 }
 
-                if (ChatInputs.Contains("2"))
+                if (ChatInputs.ToLower() == "!join 2")
                 {
                     costumepick.pickoutfit(2);
                 }
 
-                if (ChatInputs.Contains("3"))
+                if (ChatInputs.ToLower() == "!join 3")
                 {
                     costumepick.pickoutfit(3);
                 }
 
-                if (ChatInputs.Contains("4"))
+                if (ChatInputs.ToLower() == "!join 4")
                 {
                     costumepick.pickoutfit(4);
                 }
 
-                if (ChatInputs.Contains("5"))
+                if (ChatInputs.ToLower() == "!join 5")
                 {
                     costumepick.pickoutfit(5);
                 }

@@ -32,6 +32,7 @@ public class WinManager : MonoBehaviour
             if (chickensLeft < 2)
             {
                 chickens[0].gameObject.GetComponent<ChickenHealth>().invincible = true;
+                audioSource.PlayOneShot(clip);
                 Winlevel();
             }
         }
@@ -41,7 +42,6 @@ public class WinManager : MonoBehaviour
     public void Winlevel()
     {
         winnerInfo.winnername = chickens[0].gameObject.GetComponent<Chickeninput>().username;
-        audioSource.PlayOneShot(clip);
         Time.timeScale = 0.4f;
         StartCoroutine(WinTime());
     }
