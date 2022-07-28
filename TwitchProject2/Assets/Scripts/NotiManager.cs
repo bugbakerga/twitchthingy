@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class NotiManager : MonoBehaviour
 {
@@ -9,9 +9,11 @@ public class NotiManager : MonoBehaviour
 
     public CameraShaker cameraShaker;
 
-    public TextMeshProUGUI deathbox;
+    public GameObject popupprefab;
+    public Transform noticontent;
 
-    public Animator animator;
+    public Texture2D deadicon;
+    public Texture2D spawnedicon;
 
     private void Awake()
     {
@@ -20,14 +22,14 @@ public class NotiManager : MonoBehaviour
 
     public void addNotification(string user)
     {
-        deathbox.text = deathbox.text + "\n" + user + " has perished!";
+        string notiuser = user + " has perished!";
+        Instantiate(popupprefab, noticontent).GetComponent<Notification>().SetNoti(notiuser, deadicon);
         cameraShaker.ShakeSmall();
-        animator.SetTrigger("joined");
     }
 
     public void addAppearence(string prizename)
     {
-        deathbox.text = deathbox.text + "\n" + "A " + prizename + " has appeared!" ;
-        animator.SetTrigger("joined");
+        string notiappear = "A " + prizename + " has appeared!";
+        Instantiate(popupprefab, noticontent).GetComponent<Notification>().SetNoti(notiappear, spawnedicon);
     }
 }

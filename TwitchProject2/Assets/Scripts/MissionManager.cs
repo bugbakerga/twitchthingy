@@ -24,6 +24,7 @@ public class MissionManager : MonoBehaviour
     public int randomnumber;
 
     bool inMission;
+    bool canadd;
     public GameObject endprize;
     public GameObject endprizeptc;
     public Transform prizespawn;
@@ -44,14 +45,18 @@ public class MissionManager : MonoBehaviour
 
     public void AddHype()
     {
-        if (hype + chatthreshhold <= maxHype)
+        if(canadd == true)
         {
-            hype += chatthreshhold;
-        }
-        else
-        {
-            hype = maxHype;
-            resetHype();
+            if (hype + chatthreshhold <= maxHype)
+            {
+                hype += chatthreshhold;
+            }
+            else
+            {
+                canadd = false;
+                hype = maxHype;
+                resetHype();
+            }
         }
     }
 
@@ -72,6 +77,7 @@ public class MissionManager : MonoBehaviour
         message.SetTrigger("mission");
         baranim.SetBool("isopen", true);
         audioSource.PlayOneShot(clip);
+        canadd = true;
     }
 
     public void resetHype()

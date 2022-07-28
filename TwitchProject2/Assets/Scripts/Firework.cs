@@ -42,22 +42,14 @@ public class Firework : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(firelevel > 0)
-        {
-            parentpos.position = plotpoint;
-        }
-    }
-
     public void findrandompos()
     {
         //calculate random point in range
         float ramdomZ = Random.Range(-walkPointRange, walkPointRange);
         float ramdomX = Random.Range(-walkPointRange, walkPointRange);
 
-        plotpoint = new Vector3(ramdomX, parentpos.position.y, ramdomZ);
+        plotpoint = new Vector3(ramdomX, 1f, ramdomZ);
+        parentpos.position = plotpoint;
     }
 
     IEnumerator triggerreset()
