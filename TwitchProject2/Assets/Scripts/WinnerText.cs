@@ -10,6 +10,8 @@ public class WinnerText : MonoBehaviour
     public TextMeshProUGUI huddisplay;
 
     public GameObject copied;
+    public Transform copiedposition;
+
 
     // Start is called before the first frame update
     void Start()
@@ -20,17 +22,10 @@ public class WinnerText : MonoBehaviour
 
     public void CopyWinner()
     {
+        Instantiate(copied, copiedposition).GetComponent<AudioSource>().Play();
         TextEditor textEditor = new TextEditor();
         textEditor.text = WinnerInfo.instance.winnername;
         textEditor.SelectAll();
         textEditor.Copy();
-        copied.SetActive(false);
-        StartCoroutine(resetcopied());
-    }
-
-    IEnumerator resetcopied()
-    {
-        yield return new WaitForSeconds(0.3f);
-        copied.SetActive(true);
     }
 }

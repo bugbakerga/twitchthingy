@@ -53,7 +53,7 @@ public class WinManager : MonoBehaviour
         yield return new WaitForSeconds(1);
         fadeobject.SetActive(true);
         yield return new WaitForSeconds(0.5f);
-        SceneManager.LoadSceneAsync(2);
+        SceneManager.LoadScene(2);
     }
 
 }
