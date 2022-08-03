@@ -1626,6 +1626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hubui: {fileID: 223883144}
+  delay: 4
 --- !u!1 &740246519
 GameObject:
   m_ObjectHideFlags: 0
@@ -2406,7 +2407,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 0f5b204e13154c74ca45cc07b471a357, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 

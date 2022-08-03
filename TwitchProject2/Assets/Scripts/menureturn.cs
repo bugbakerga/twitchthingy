@@ -18,6 +18,6 @@ public class menureturn : MonoBehaviour
     IEnumerator delaytime()
     {
         yield return new WaitForSeconds(0.5f);
-        SceneManager.LoadSceneAsync(3);
+        SceneManager.LoadScene(3);
     }
 }
