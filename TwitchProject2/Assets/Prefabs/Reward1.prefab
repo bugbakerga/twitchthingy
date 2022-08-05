@@ -4861,8 +4861,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  explosion: {fileID: 6455224076515882352, guid: 89b97238416f9204f9f486f6d4d848c6,
-    type: 3}
+  explosion: {fileID: 1121192042590650, guid: 4b9b71b9d12cc3043994d787fb35a6e1, type: 3}
   parentobj: {fileID: 4770477716086727122}
 --- !u!1 &4388287913963664463
 GameObject:
