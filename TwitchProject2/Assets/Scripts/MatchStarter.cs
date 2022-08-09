@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class MatchStarter : MonoBehaviour
@@ -14,16 +15,22 @@ public class MatchStarter : MonoBehaviour
     public TextMeshProUGUI counter;
     public GameObject counterobj;
 
-    public TextMeshProUGUI countdown;
+    public Text countdown;
+    public Animator countanim;
 
     public WinManager winManager;
     public MissionManager missionManager;
+
+    AudioSource countsound;
+    public AudioClip sound1;
+    public AudioClip sound2;
 
     // will soon be called or enabled on start of match
     void Start()
     {
         chickens = GameObject.FindGameObjectsWithTag("Chiken");
         countdown.text = "";
+        countsound = gameObject.GetComponent<AudioSource>();
     }
 
     void Update()
@@ -46,17 +53,25 @@ public class MatchStarter : MonoBehaviour
     IEnumerator Countsequence()
     {
         yield return new WaitForSeconds(3f);
+        countanim.SetTrigger("pop1");
         countdown.text = "3";
+        countsound.PlayOneShot(sound1);
         yield return new WaitForSeconds(1f);
+        countanim.SetTrigger("pop1");
         countdown.text = "2";
+        countsound.PlayOneShot(sound1);
         yield return new WaitForSeconds(1f);
+        countanim.SetTrigger("pop1");
         countdown.text = "1";
+        countsound.PlayOneShot(sound1);
         yield return new WaitForSeconds(1f);
+        countanim.SetTrigger("pop2");
         countdown.text = "Go!";
         winManager.gamestarted = true;
         startchickens();
         missionManager.startfirst();
-        yield return new WaitForSeconds(1f);
+        countsound.PlayOneShot(sound2);
+        yield return new WaitForSeconds(0.9f);
         countdown.text = "";
     }
 
