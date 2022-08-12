@@ -12,6 +12,8 @@ public class levelSelectManager : MonoBehaviour
 
     public Text desctext;
 
+    public Animator description;
+
     public int sceneselected = 1;
 
     void Start()
@@ -27,6 +29,7 @@ public class levelSelectManager : MonoBehaviour
         sceneselected = info.scenenum;
         closeup.texture = info.mappreview;
         desctext.text = info.description;
+        description.SetTrigger("move");
     }
 
     public void PlayMatch()
