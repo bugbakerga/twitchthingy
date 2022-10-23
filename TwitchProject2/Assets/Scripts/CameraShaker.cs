@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class CameraShaker : MonoBehaviour
 {
+    public static CameraShaker instance;
+
     public Animator animator;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     public void ShakeSmall()
     {
@@ -19,5 +26,10 @@ public class CameraShaker : MonoBehaviour
         {
             animator.SetTrigger("shakesm2");
         }
+    }
+
+    public void ShakeLarge()
+    {
+        animator.SetTrigger("shakesm3");
     }
 }

@@ -7,8 +7,6 @@ public class NotiManager : MonoBehaviour
 {
     public static NotiManager instance;
 
-    public CameraShaker cameraShaker;
-
     public GameObject popupprefab;
     public Transform noticontent;
 
@@ -24,7 +22,7 @@ public class NotiManager : MonoBehaviour
     {
         string notiuser = user + " has perished!";
         Instantiate(popupprefab, noticontent).GetComponent<Notification>().SetNoti(notiuser, deadicon);
-        cameraShaker.ShakeSmall();
+        CameraShaker.instance.ShakeSmall();
     }
 
     public void addAppearence(string prizename)
