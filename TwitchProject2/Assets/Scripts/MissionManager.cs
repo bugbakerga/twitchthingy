@@ -71,13 +71,13 @@ public class MissionManager : MonoBehaviour
     public void missionContents()
     {
         randomnumber = Random.Range(0, emote.Length);
+        canadd = true;
         display.texture = emote[randomnumber].emoteImage;
         proggressdisplay.texture = emote[randomnumber].emoteImage;
         textDisplay.text = "Emote Mission: " + emote[randomnumber].emoteName;
         message.SetTrigger("mission");
         baranim.SetBool("isopen", true);
         audioSource.PlayOneShot(clip);
-        canadd = true;
     }
 
     public void resetHype()
