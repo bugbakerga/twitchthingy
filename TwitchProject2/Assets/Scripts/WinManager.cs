@@ -11,15 +11,12 @@ public class WinManager : MonoBehaviour
     GameObject[] chickens;
     public WinnerInfo winnerInfo;
 
-    AudioSource audioSource;
-    public AudioClip clip;
 
     public GameObject fadeobject;
 
     // will soon be called or enabled on start of match
     void Start()
     {
-        audioSource = gameObject.GetComponent<AudioSource>();
         chickens = GameObject.FindGameObjectsWithTag("Chiken");
     }
 
@@ -32,7 +29,6 @@ public class WinManager : MonoBehaviour
             if (chickensLeft < 2)
             {
                 chickens[0].gameObject.GetComponent<ChickenHealth>().invincible = true;
-                audioSource.PlayOneShot(clip);
                 Winlevel();
             }
         }
