@@ -46,7 +46,6 @@ public class ChickenSpawner : MonoBehaviour
 
     private void Connect()
     {
-        Debug.Log("everything else works");
         twitchClient = new TcpClient("irc.chat.twitch.tv", 6667);
         reader = new StreamReader(twitchClient.GetStream());
         writer = new StreamWriter(twitchClient.GetStream());
@@ -63,6 +62,7 @@ public class ChickenSpawner : MonoBehaviour
         if (twitchClient.Available > 0)
         {
             var message = reader.ReadLine();
+            Debug.Log("logged in!");
 
             if (message.Contains("PRIVMSG"))
             {

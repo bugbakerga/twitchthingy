@@ -18,24 +18,24 @@ public class Login : MonoBehaviour
     public GameObject enterbutton;
     public LoginInfo sendmanager;
 
+    public VerifyAccount checker;
+    public GameObject loading;
+
     void Update()
     {
-        if (loggedin == false)
+        if (usernameText.text == "" || passwordText.text == "" || publicnameText.text == "")
         {
-            if (usernameText.text == "" || passwordText.text == "" || publicnameText.text == "")
-            {
-                enterbutton.SetActive(false);
-            }
-            else
-            {
-                enterbutton.SetActive(true);
-            }
+            enterbutton.SetActive(false);
         }
+        else
+        {
+            enterbutton.SetActive(true);
+        }
+     
     }
 
     public void SubmitUser()
     {
-        loggedin = true;
         user = usernameText.text;
         pass = passwordText.text;
         puser = publicnameText.text;
@@ -47,15 +47,14 @@ public class Login : MonoBehaviour
         sendmanager.username = user;
         sendmanager.displayname = puser;
         sendmanager.password = pass;
+        loading.SetActive(true);
+        SceneManager.LoadScene(3);
+
     }
 
     public void tmilink()
     {
         Application.OpenURL("https://twitchapps.com/tmi/");
     }
-
-    public void playgame()
-    {
-        SceneManager.LoadScene(1);
-    }
+   
 }
