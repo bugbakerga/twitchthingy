@@ -17,4 +17,5 @@ public class BombPrize : MonoBehaviour
             Destroy(parentobj);
         }
     }
+
 }

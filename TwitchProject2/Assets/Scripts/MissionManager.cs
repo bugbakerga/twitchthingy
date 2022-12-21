@@ -18,6 +18,9 @@ public class MissionManager : MonoBehaviour
     public Animator message;
     public Animator baranim;
 
+    public Animator reminderanimator;
+    public Text remindertext;
+
     public int chatthreshhold;
     public float smoothspeed;
     public TextMeshProUGUI textDisplay;
@@ -77,6 +80,8 @@ public class MissionManager : MonoBehaviour
         textDisplay.text = "Emote Mission: " + emote[randomnumber].emoteName;
         message.SetTrigger("mission");
         baranim.SetBool("isopen", true);
+        reminderanimator.SetTrigger("move");
+        remindertext.text = ">" + emote[randomnumber].emoteName + "< in chat!";
         audioSource.PlayOneShot(clip);
     }
 
@@ -86,6 +91,7 @@ public class MissionManager : MonoBehaviour
         Instantiate(endprizeptc, prizespawn.position, Quaternion.identity);
         hype = 0f;
         baranim.SetBool("isopen", false);
+        reminderanimator.SetTrigger("ending");
         StartCoroutine(missiondelay());
     }
 
