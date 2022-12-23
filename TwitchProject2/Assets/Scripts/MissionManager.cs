@@ -81,7 +81,7 @@ public class MissionManager : MonoBehaviour
         message.SetTrigger("mission");
         baranim.SetBool("isopen", true);
         reminderanimator.SetTrigger("move");
-        remindertext.text = ">" + emote[randomnumber].emoteName + "< in chat!";
+        remindertext.text = emote[randomnumber].emoteName + " in chat!";
         audioSource.PlayOneShot(clip);
     }
 
