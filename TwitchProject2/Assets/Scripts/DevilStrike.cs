@@ -12,20 +12,50 @@ public class DevilStrike : MonoBehaviour
 
     public GameObject destroyeffect;
     public GameObject parentobject;
+    public GameObject dropEffect;
+
+    public Transform groundCheck;
+    public float groundDistance = 0.4f;
+    public LayerMask groundMask;
+
+    bool hitground;
+    bool spawnfx;
 
     GameObject[] chickens;
 
     int randnum;
 
+    void Update()
+    {
+        hitground = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+
+        if (hitground == true)
+        {
+            Drop();
+        }
+    }
+
+    public void Drop()
+    {
+        if (spawnfx == false)
+        {
+            spawnfx = true;
+            Instantiate(dropEffect, transform.position, Quaternion.identity);
+        }
+    }
+
     void OnTriggerEnter(Collider plyr)
     {
         if (plyr.gameObject.tag == "Chiken")
         {
-            gameObject.GetComponent<BoxCollider>().enabled = false;
-            animator.SetTrigger("power");
-            parentobject.gameObject.GetComponent<Rigidbody>().useGravity = false;
-            parentobject.gameObject.GetComponent<BoxCollider>().enabled = false;
-            StartCoroutine(strike());
+            if(hitground == true)
+            {
+                gameObject.GetComponent<BoxCollider>().enabled = false;
+                animator.SetTrigger("power");
+                parentobject.gameObject.GetComponent<Rigidbody>().useGravity = false;
+                parentobject.gameObject.GetComponent<BoxCollider>().enabled = false;
+                StartCoroutine(strike());
+            }
         }
     }
 
@@ -40,5 +70,11 @@ public class DevilStrike : MonoBehaviour
         yield return new WaitForSeconds(2.5f);
         Instantiate(destroyeffect, transform.position, Quaternion.identity);
         Destroy(parentobject);
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(groundCheck.position, groundDistance);
     }
 }
