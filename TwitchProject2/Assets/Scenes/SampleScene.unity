@@ -4950,7 +4950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xSpeed: 0
-  ySpeed: 100
+  ySpeed: 0
   zSpeed: 200
 --- !u!1 &1166986455
 GameObject:
