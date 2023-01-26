@@ -108,7 +108,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heal: 0.5
   parentobj: {fileID: 4804820056815168195}
-  animator: {fileID: 4540815072074567527}
 --- !u!1 &2861636627047141177
 GameObject:
   m_ObjectHideFlags: 0
@@ -4872,7 +4871,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4804820055759279101}
-  - component: {fileID: 4540815072074567527}
+  - component: {fileID: 1735174891649396092}
   m_Layer: 0
   m_Name: Box
   m_TagString: Untagged
@@ -4895,25 +4894,21 @@ Transform:
   m_Father: {fileID: 4804820056815168199}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &4540815072074567527
-Animator:
-  serializedVersion: 3
+--- !u!114 &1735174891649396092
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4804820055759279102}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4b365cfa67b37954c86fe88ef6102fb4, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27d42907f0b4a1a4b8bea37bde299bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xSpeed: 0
+  ySpeed: 50
+  zSpeed: 0
 --- !u!1 &4804820056815168195
 GameObject:
   m_ObjectHideFlags: 0
@@ -4928,6 +4923,7 @@ GameObject:
   - component: {fileID: 4804820056815168194}
   - component: {fileID: 4804820056815168198}
   - component: {fileID: 1561306824368954906}
+  - component: {fileID: 8735770184510620902}
   m_Layer: 0
   m_Name: HealPrize
   m_TagString: Untagged
@@ -5041,6 +5037,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameofprize: heal
+--- !u!114 &8735770184510620902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4804820056815168195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ff2bf5486b3a74e9c1bdc93c52be1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropEffect: {fileID: 7610638335457775037, guid: 9e9355a7d03d4d0458bb4c33cac2c862,
+    type: 3}
+  groundCheck: {fileID: 4804820056815168199}
+  groundDistance: 0.76
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!1001 &4804820056421981733
 PrefabInstance:
   m_ObjectHideFlags: 0

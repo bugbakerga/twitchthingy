@@ -13,6 +13,8 @@ public class GlockLogic : MonoBehaviour
     public Animator animator;
 
     public GameObject gun;
+    public AudioSource sfxsource;
+    public AudioClip clip;
 
     bool shoot;
 
@@ -39,6 +41,7 @@ public class GlockLogic : MonoBehaviour
                 animator.SetTrigger("shoot");
                 muzzle.Play();
                 Instantiate(bullet, spawnpos.position, spawnpos.rotation);
+                sfxsource.PlayOneShot(clip);
                 StartCoroutine(glockSecond());
             }
         }
