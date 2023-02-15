@@ -9900,6 +9900,9 @@ MonoBehaviour:
   animator: {fileID: 549629228701762562}
   prizeobjects:
   - {fileID: 1339408726478693945, guid: f8f7990c702bd71418a782b47854e1cb, type: 3}
+  - {fileID: 4770477716086727122, guid: c998cd27ff29c31468170367407b739c, type: 3}
+  - {fileID: 3350316797197950333, guid: 497c946d912b7e44a9fa5944fea39f02, type: 3}
+  - {fileID: 2606359425794189780, guid: cc736558b0019bc4482b30d059a91cad, type: 3}
 --- !u!82 &6566879550617711297
 AudioSource:
   m_ObjectHideFlags: 0
