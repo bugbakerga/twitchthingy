@@ -9,6 +9,7 @@ public class prizeMovement : MonoBehaviour
     public Vector3 walkPoint;
     bool walkPointSet;
     public float speed;
+    public PrizeDrop prizeDrop;
 
     public float walkPointRange;
     public GameObject thelight;
@@ -69,7 +70,7 @@ public class prizeMovement : MonoBehaviour
         yield return new WaitForSeconds(randomtime);
         animator.SetTrigger("despawn");
         yield return new WaitForSeconds(0.1f);
-        Instantiate(prizeobjects[randomprize], transform.position, Quaternion.identity);
+        prizeDrop.DropPrize();
         yield return new WaitForSeconds(0.3f);
         Destroy(gameObject);
     }

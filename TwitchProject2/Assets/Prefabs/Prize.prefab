@@ -9795,6 +9795,7 @@ GameObject:
   - component: {fileID: 9209737228307828958}
   - component: {fileID: 9209737228307828954}
   - component: {fileID: 6566879550617711297}
+  - component: {fileID: 5126878569872564128}
   m_Layer: 0
   m_Name: Prize
   m_TagString: Untagged
@@ -9894,6 +9895,7 @@ MonoBehaviour:
   ismoving: 0
   walkPoint: {x: 0, y: 0, z: 0}
   speed: 2
+  prizeDrop: {fileID: 0}
   walkPointRange: 4.5
   thelight: {fileID: 9209737227418040496}
   particle: {fileID: 97799288416030317}
@@ -9999,6 +10001,35 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5126878569872564128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9209737228307828961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c2198ef1467be4ab477d349d080cfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prizes:
+  - prefname: bomb
+    prizeprefab: {fileID: 4770477716086727122, guid: c998cd27ff29c31468170367407b739c,
+      type: 3}
+  - prefname: kit
+    prizeprefab: {fileID: 4804820056815168195, guid: fe44fff5cde564d44a1c42a7ec413ae7,
+      type: 3}
+  - prefname: staff
+    prizeprefab: {fileID: 3350316797197950333, guid: 497c946d912b7e44a9fa5944fea39f02,
+      type: 3}
+  - prefname: gun
+    prizeprefab: {fileID: 1339408726478693945, guid: f8f7990c702bd71418a782b47854e1cb,
+      type: 3}
+  - prefname: laser
+    prizeprefab: {fileID: 52096612193207114, guid: ae50f4100630d7b4380d8a0bd08b169a,
+      type: 3}
+  selectedPrizes: []
 --- !u!1001 &4823100614472369701
 PrefabInstance:
   m_ObjectHideFlags: 0

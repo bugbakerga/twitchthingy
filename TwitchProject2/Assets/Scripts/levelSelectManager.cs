@@ -13,6 +13,11 @@ public class levelSelectManager : MonoBehaviour
     public Text desctext;
 
     public int sceneselected = 1;
+    public Prize[] prizes;
+    public int amountofselectedPrizes = 0;
+
+    public GameObject warning;
+    public GameObject Loading;
 
     void Start()
     {
@@ -29,8 +34,29 @@ public class levelSelectManager : MonoBehaviour
         desctext.text = info.description;
     }
 
+    public void determineSelection()
+    {
+        for (int i = 0; i < prizes.Length; i++)
+        {
+            if (PlayerPrefs.GetInt(prizes[i].prefname) == 1)
+            {
+                amountofselectedPrizes += 1;
+            }
+        }
+
+        PlayMatch();
+    }
+
     public void PlayMatch()
     {
-        SceneManager.LoadScene(sceneselected);
+        if(amountofselectedPrizes > 0)
+        {
+            Loading.SetActive(true);
+            SceneManager.LoadScene(sceneselected);
+        }
+        else
+        {
+            warning.SetActive(true);
+        }
     }
 }
