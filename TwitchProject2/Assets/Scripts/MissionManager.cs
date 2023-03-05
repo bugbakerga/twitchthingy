@@ -20,6 +20,7 @@ public class MissionManager : MonoBehaviour
 
     public Animator reminderanimator;
     public Text remindertext;
+    public string settingname;
 
     public int chatthreshhold;
     public float smoothspeed;
@@ -39,6 +40,8 @@ public class MissionManager : MonoBehaviour
     {
         StartCoroutine(missiondelay());
         audioSource = gameObject.GetComponent<AudioSource>();
+        maxHype = PlayerPrefs.GetFloat(settingname, 5);
+        bar.maxValue = maxHype;
     }
 
     public void BeginMission()

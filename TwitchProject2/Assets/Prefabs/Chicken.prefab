@@ -10388,6 +10388,7 @@ MonoBehaviour:
   - {fileID: 1008232909893135115}
   - {fileID: 1024441599464044757}
   textDisplay: {fileID: 1109103242020736513}
+  chickenHealth: {fileID: 3714068342205552035}
 --- !u!114 &5621897587680649890
 MonoBehaviour:
   m_ObjectHideFlags: 0

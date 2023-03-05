@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3907,7 +3907,8 @@ MonoBehaviour:
   baranim: {fileID: 1635801882}
   reminderanimator: {fileID: 1479761381}
   remindertext: {fileID: 1135693669}
-  chatthreshhold: 20
+  settingname: 
+  chatthreshhold: 1
   smoothspeed: 5
   textDisplay: {fileID: 788246254}
   randomnumber: 0

@@ -9895,7 +9895,7 @@ MonoBehaviour:
   ismoving: 0
   walkPoint: {x: 0, y: 0, z: 0}
   speed: 2
-  prizeDrop: {fileID: 0}
+  prizeDrop: {fileID: 5126878569872564128}
   walkPointRange: 4.5
   thelight: {fileID: 9209737227418040496}
   particle: {fileID: 97799288416030317}
