@@ -40,7 +40,7 @@ public class MissionManager : MonoBehaviour
     {
         StartCoroutine(missiondelay());
         audioSource = gameObject.GetComponent<AudioSource>();
-        maxHype = PlayerPrefs.GetFloat(settingname, 5);
+        maxHype = PlayerPrefs.GetFloat(settingname, 5) - 1f;
         bar.maxValue = maxHype;
     }
 

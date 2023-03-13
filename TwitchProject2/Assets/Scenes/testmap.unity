@@ -3907,7 +3907,7 @@ MonoBehaviour:
   baranim: {fileID: 1635801882}
   reminderanimator: {fileID: 1479761381}
   remindertext: {fileID: 1135693669}
-  settingname: 
+  settingname: chateffort
   chatthreshhold: 1
   smoothspeed: 5
   textDisplay: {fileID: 788246254}

@@ -15,6 +15,7 @@ public class PoolSelection : MonoBehaviour
     {
         settingValue = PlayerPrefs.GetFloat(settingname, slider.minValue);
         slider.value = settingValue;
+        settingText.text = settingValue.ToString();
     }
 
     public void SliderInput(float value)
