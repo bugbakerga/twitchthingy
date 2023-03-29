@@ -12,11 +12,12 @@ public class MatchStarter : MonoBehaviour
 
     GameObject[] chickens;
 
-    public TextMeshProUGUI counter;
+    public Text counter;
     public GameObject counterobj;
 
     public Text countdown;
     public Animator countanim;
+    public Animator costumeanim;
 
     public WinManager winManager;
     public MissionManager missionManager;
@@ -42,7 +43,7 @@ public class MatchStarter : MonoBehaviour
             iscountingdown = true;
             StartCoroutine(Countsequence());
             counterobj.SetActive(false);
-            counter.text = "";
+            costumeanim.SetTrigger("costumehide");
         }
         else
         {

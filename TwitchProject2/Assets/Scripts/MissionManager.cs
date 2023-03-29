@@ -30,7 +30,6 @@ public class MissionManager : MonoBehaviour
     bool inMission;
     bool canadd;
     public GameObject endprize;
-    public GameObject endprizeptc;
     public Transform prizespawn;
 
     AudioSource audioSource;
@@ -91,7 +90,6 @@ public class MissionManager : MonoBehaviour
     public void resetHype()
     {
         Instantiate(endprize, prizespawn.position, Quaternion.identity);
-        Instantiate(endprizeptc, prizespawn.position, Quaternion.identity);
         hype = 0f;
         baranim.SetBool("isopen", false);
         reminderanimator.SetTrigger("ending");
