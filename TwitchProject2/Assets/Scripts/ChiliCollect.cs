@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GlockCollect : MonoBehaviour
+public class ChiliCollect : MonoBehaviour
 {
     public GameObject parentObject;
     public GameObject collectgfx;
@@ -11,7 +11,7 @@ public class GlockCollect : MonoBehaviour
     {
         if (plyr.gameObject.tag == "Chiken")
         {
-            plyr.gameObject.GetComponent<GlockLogic>().addGlockTime();
+            plyr.gameObject.GetComponent<ChiliLogic>().addFiredmgTime();
             Instantiate(collectgfx, transform.position, Quaternion.identity);
             Destroy(parentObject);
         }

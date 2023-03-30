@@ -74,19 +74,8 @@ public class Chickeninput : MonoBehaviour
                 message = message.Substring(splitpoint + 1);
                 print(String.Format("{0}: {1}", chatName, message));
 
-                GameInputs(message, chatName);
             }
         }
     }
 
-    private void GameInputs(string ChatInputs, string playername)
-    {
-        if(playername == namestring)
-        {
-            if (ChatInputs.ToLower() == "!boost")
-            {
-                controller.fight();
-            }
-        }
-    }
 }

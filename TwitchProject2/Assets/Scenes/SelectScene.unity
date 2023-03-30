@@ -11328,7 +11328,7 @@ PrefabInstance:
     - target: {fileID: 6020114911202366792, guid: f5a99376b5eb36140aa8f52398f14880,
         type: 3}
       propertyPath: equipedname
-      value: this
+      value: fire
       objectReference: {fileID: 0}
     - target: {fileID: 8001327124786784126, guid: f5a99376b5eb36140aa8f52398f14880,
         type: 3}
@@ -11338,7 +11338,7 @@ PrefabInstance:
     - target: {fileID: 8220506382048584939, guid: f5a99376b5eb36140aa8f52398f14880,
         type: 3}
       propertyPath: m_Text
-      value: This
+      value: Fire
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5a99376b5eb36140aa8f52398f14880, type: 3}
@@ -12378,6 +12378,12 @@ MonoBehaviour:
     prizeprefab: {fileID: 4770477716086727122, guid: c998cd27ff29c31468170367407b739c,
       type: 3}
   - prefname: laser
+    prizeprefab: {fileID: 4770477716086727122, guid: c998cd27ff29c31468170367407b739c,
+      type: 3}
+  - prefname: fire
+    prizeprefab: {fileID: 4770477716086727122, guid: c998cd27ff29c31468170367407b739c,
+      type: 3}
+  - prefname: chili
     prizeprefab: {fileID: 4770477716086727122, guid: c998cd27ff29c31468170367407b739c,
       type: 3}
   amountofselectedPrizes: 0
@@ -19329,7 +19335,7 @@ PrefabInstance:
     - target: {fileID: 6020114911202366792, guid: f5a99376b5eb36140aa8f52398f14880,
         type: 3}
       propertyPath: equipedname
-      value: left
+      value: chili
       objectReference: {fileID: 0}
     - target: {fileID: 8001327124786784126, guid: f5a99376b5eb36140aa8f52398f14880,
         type: 3}
@@ -19339,7 +19345,7 @@ PrefabInstance:
     - target: {fileID: 8220506382048584939, guid: f5a99376b5eb36140aa8f52398f14880,
         type: 3}
       propertyPath: m_Text
-      value: Righty
+      value: Chili
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5a99376b5eb36140aa8f52398f14880, type: 3}

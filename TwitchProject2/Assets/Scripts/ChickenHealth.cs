@@ -6,8 +6,7 @@ using UnityEngine.UI;
 public class ChickenHealth : MonoBehaviour
 {
     public bool invincible;
-    public Image theFill;
-    bool isburning;
+    public Image healthgfx;
 
     public float maxHealth;
     public float health;
@@ -19,7 +18,6 @@ public class ChickenHealth : MonoBehaviour
     public GameObject blood;
     public GameObject healfx;
     public Animator baranim;
-    public GameObject burnfx;
 
     AudioSource speaker;
     Chickeninput inputmanager;
@@ -70,37 +68,11 @@ public class ChickenHealth : MonoBehaviour
         }
     }
 
-    public void StartBurn(float damage)
-    {
-        if(isburning == false)
-        {
-            isburning = true;
-            StartCoroutine(Burn(damage));
-        }
-    }
-
-    IEnumerator Burn(float burnamount)
-    {
-        burnfx.SetActive(true);
-        yield return new WaitForSeconds(0.6f);
-        TakeDamage(burnamount);
-        yield return new WaitForSeconds(0.6f);
-        TakeDamage(burnamount);
-        yield return new WaitForSeconds(0.6f);
-        TakeDamage(burnamount);
-        yield return new WaitForSeconds(0.6f);
-        TakeDamage(burnamount);
-        yield return new WaitForSeconds(0.6f);
-        TakeDamage(burnamount);
-        burnfx.SetActive(false);
-        isburning = false;
-    }
-
     public void Update()
     {
-        if(theFill.fillAmount != health)
+        if(healthgfx.fillAmount != health)
         {
-            theFill.fillAmount = Mathf.Lerp(theFill.fillAmount, health, smoothspeed * Time.deltaTime);
+            healthgfx.fillAmount = Mathf.Lerp(healthgfx.fillAmount, health, smoothspeed * Time.deltaTime);
         }
     }
 }

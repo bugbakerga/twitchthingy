@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class FireBurn : MonoBehaviour
 {
-    public float damage = 0.05f;
 
     void Start()
     {
@@ -15,7 +14,7 @@ public class FireBurn : MonoBehaviour
     {
         if (plyr.gameObject.tag == "Chiken")
         {
-            plyr.gameObject.GetComponent<ChickenHealth>().StartBurn(damage);
+            plyr.gameObject.GetComponent<BurnLogic>().addFiredmgTime();
         }
     }
 }

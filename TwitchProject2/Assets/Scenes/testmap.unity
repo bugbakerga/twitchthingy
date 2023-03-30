@@ -5909,8 +5909,6 @@ MonoBehaviour:
   randomnumber: 0
   endprize: {fileID: 9209737228307828961, guid: fe8f25e5aa6b6384296b79e362c17f3d,
     type: 3}
-  endprizeptc: {fileID: 7677643261047967739, guid: 39919394402505745a78a58ccc614057,
-    type: 3}
   prizespawn: {fileID: 266139761}
   clip: {fileID: 8300000, guid: f81b54cd35c75084f9a830119cc9f08b, type: 3}
 --- !u!114 &1679035735

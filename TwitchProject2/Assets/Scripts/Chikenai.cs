@@ -18,6 +18,7 @@ public class Chikenai : MonoBehaviour
     //States
     public bool isStarted = false;
     public bool isfighting = true;
+    bool canboost = true;
 
     //particles
     public GameObject redptc;
@@ -37,18 +38,6 @@ public class Chikenai : MonoBehaviour
     public void beginmatch()
     {
         isStarted = true;
-    }
-
-    public void fight()
-    {
-        if(isfighting == true)
-        {
-            isfighting = false;
-            Boost();
-            overheadtext.SetBool("isrecharged", false);
-            Instantiate(redptc, transform.position, Quaternion.identity);
-            chickengfx.GetComponent<Renderer>().material = chickencolors[1];
-        }
     }
 
     public void attackplayer()
@@ -91,11 +80,28 @@ public class Chikenai : MonoBehaviour
             walkPointSet = true;
     }
 
-    private void Boost()
+    public void Boost()
     {
-        agent.speed = 8.7f;
-        chickenanims.speed = 2f;
-        StartCoroutine(speedup());
+        if(canboost == true)
+        {
+            canboost = false;
+            agent.speed = 8.7f;
+            chickenanims.speed = 2f;
+            Instantiate(redptc, transform.position, Quaternion.identity);
+            chickengfx.GetComponent<Renderer>().material = chickencolors[1];
+        }
+    }
+
+    public void UnBoost()
+    {
+        if(canboost == false)
+        {
+            canboost = true;
+            agent.speed = 3.5f;
+            chickenanims.speed = 1f;
+            Instantiate(whiteptc, transform.position, Quaternion.identity);
+            chickengfx.GetComponent<Renderer>().material = chickencolors[0];
+        }
     }
 
     public void takedamage()
@@ -106,17 +112,5 @@ public class Chikenai : MonoBehaviour
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-    }
-
-    IEnumerator speedup()
-    {
-        yield return new WaitForSeconds(3f);
-        agent.speed = 3.5f;
-        Instantiate(whiteptc, transform.position, Quaternion.identity);
-        chickengfx.GetComponent<Renderer>().material = chickencolors[0];
-        chickenanims.speed = 1f;
-        yield return new WaitForSeconds(10f);
-        isfighting = true;
-        overheadtext.SetBool("isrecharged", true);
     }
 }

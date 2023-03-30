@@ -16,14 +16,12 @@ public class prizeMovement : MonoBehaviour
     public ParticleSystem particle;
     public Animator animator;
 
-    public GameObject[] prizeobjects;
     private int randomtime;
     private int randomprize;
 
     void Start()
     {
         StartCoroutine(moveprize());
-        randomprize = Random.Range(0, prizeobjects.Length);
         randomtime = Random.Range(5, 15);
     }
 

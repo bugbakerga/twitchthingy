@@ -222,7 +222,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.6801399, g: 1, b: 0.6745283, a: 1}
+      maxColor: {r: 1, g: 0.02821736, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4767,8 +4767,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ebc34671db4a897479087608e5f9b9fa, type: 2}
-  - {fileID: 2100000, guid: ebc34671db4a897479087608e5f9b9fa, type: 2}
+  - {fileID: 2100000, guid: 7ae36ab4c309a9147a9967ecf97fb7d1, type: 2}
+  - {fileID: 2100000, guid: 7ae36ab4c309a9147a9967ecf97fb7d1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4823,7 +4823,7 @@ GameObject:
   - component: {fileID: 4397782428934085769}
   - component: {fileID: 3414244320029518067}
   m_Layer: 0
-  m_Name: HealEffect
+  m_Name: RedHalo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

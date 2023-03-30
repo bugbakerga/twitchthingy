@@ -14771,11 +14771,6 @@ MonoBehaviour:
   thelight: {fileID: 9209737227418040496}
   particle: {fileID: 97799288416030317}
   animator: {fileID: 549629228701762562}
-  prizeobjects:
-  - {fileID: 1339408726478693945, guid: f8f7990c702bd71418a782b47854e1cb, type: 3}
-  - {fileID: 4770477716086727122, guid: c998cd27ff29c31468170367407b739c, type: 3}
-  - {fileID: 52096612193207114, guid: ae50f4100630d7b4380d8a0bd08b169a, type: 3}
-  - {fileID: 1339408726478693945, guid: f8f7990c702bd71418a782b47854e1cb, type: 3}
 --- !u!82 &6566879550617711297
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14899,6 +14894,12 @@ MonoBehaviour:
       type: 3}
   - prefname: laser
     prizeprefab: {fileID: 52096612193207114, guid: ae50f4100630d7b4380d8a0bd08b169a,
+      type: 3}
+  - prefname: fire
+    prizeprefab: {fileID: 2606359425794189780, guid: cc736558b0019bc4482b30d059a91cad,
+      type: 3}
+  - prefname: chili
+    prizeprefab: {fileID: 9028126045181267092, guid: 15ee4639fc409c4419134f9e11552333,
       type: 3}
   selectedPrizes: []
 --- !u!1001 &4823100614472369701
