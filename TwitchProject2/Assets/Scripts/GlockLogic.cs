@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GlockLogic : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class GlockLogic : MonoBehaviour
     public GameObject gun;
     public AudioSource sfxsource;
     public AudioClip clip;
+
+    //Overhead icons
+    public GameObject stat;
+    public Text statText;
 
     bool shoot;
 
@@ -34,6 +39,8 @@ public class GlockLogic : MonoBehaviour
         if(glockTime > 0)
         {
             gun.SetActive(true);
+            stat.SetActive(true);
+            statText.text = glockTime.ToString();
             if(shoot == true)
             {
                 shoot = false;
@@ -48,6 +55,7 @@ public class GlockLogic : MonoBehaviour
         else
         {
             gun.SetActive(false);
+            stat.SetActive(false);
         }
     }
 

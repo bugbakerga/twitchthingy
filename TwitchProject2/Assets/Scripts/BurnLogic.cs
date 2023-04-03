@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BurnLogic : MonoBehaviour
 {
@@ -8,9 +9,14 @@ public class BurnLogic : MonoBehaviour
 
     public GameObject fire;
     float burnTime = 0f;
+    float maxburnTime = 0f;
     public float burnDamage = 0.05f;
 
     public float burndecreaserate;
+
+    //Overhead stats
+    public GameObject stat;
+    public Image statefill;
 
     bool burn;
 
@@ -22,6 +28,7 @@ public class BurnLogic : MonoBehaviour
     public void addFiredmgTime()
     {
         burnTime += 6;
+        maxburnTime += 6;
     }
 
     // Update is called once per frame
@@ -30,6 +37,8 @@ public class BurnLogic : MonoBehaviour
         if (burnTime > 0)
         {
             fire.SetActive(true);
+            stat.SetActive(true);
+            statefill.fillAmount = burnTime / maxburnTime;
             if (burn == true)
             {
                 burn = false;
@@ -41,6 +50,8 @@ public class BurnLogic : MonoBehaviour
         else
         {
             fire.SetActive(false);
+            maxburnTime = 0f;
+            stat.SetActive(false);
         }
     }
 
