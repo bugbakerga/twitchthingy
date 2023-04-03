@@ -29,6 +29,9 @@ public class Chikenai : MonoBehaviour
     public Material[] chickencolors;
     public Animator chickenanims;
 
+    //Melee
+    public SwordLogic swordLogic;
+
 
     private void Awake()
     {
@@ -43,6 +46,7 @@ public class Chikenai : MonoBehaviour
     public void attackplayer()
     {
         chickenanims.SetTrigger("attack");
+        swordLogic.SwordAction();
     }
 
     private void Update()
