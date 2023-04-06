@@ -10,12 +10,12 @@ public class CostumePicker : MonoBehaviour
     public TextMeshProUGUI textDisplay;
 
     public ChickenHealth chickenHealth;
+    public string user;
 
     public void chickinfo(string serial, string name)
     {
         textDisplay.text = name;
         chickenHealth.username = name;
-
         for (int i = 0; i < costumes.Length; i++)
         {
             if(serial == "!join " + i.ToString())

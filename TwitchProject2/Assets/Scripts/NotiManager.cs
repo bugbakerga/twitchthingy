@@ -10,8 +10,8 @@ public class NotiManager : MonoBehaviour
     public GameObject popupprefab;
     public Transform noticontent;
 
-    public Texture2D deadicon;
-    public Texture2D spawnedicon;
+    public Sprite deadicon;
+    public Sprite spawnedicon;
 
     private void Awake()
     {

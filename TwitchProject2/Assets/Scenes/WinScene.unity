@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1331,10 +1331,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2e1cd5016809074e959340023bc5428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overhead: {fileID: 1959700929}
   huddisplay: {fileID: 735010772}
   copied: {fileID: 6094715071878459372, guid: fe96a1e146935e24795b6ea66f3a0c4c, type: 3}
   copiedposition: {fileID: 832468805}
+  nameofwinner: 
 --- !u!1 &592257954
 GameObject:
   m_ObjectHideFlags: 0
@@ -1922,7 +1922,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16502
+  m_Name: pb_Mesh16668
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

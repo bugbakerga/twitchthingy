@@ -6,11 +6,11 @@ using UnityEngine.UI;
 public class Notification : MonoBehaviour
 {
     public Text notitext;
-    public RawImage notiimage;
+    public Image notiimage;
 
-    public void SetNoti(string name, Texture2D icon)
+    public void SetNoti(string name, Sprite icon)
     {
         notitext.text = name;
-        notiimage.texture = icon;
+        notiimage.sprite = icon;
     }
 }

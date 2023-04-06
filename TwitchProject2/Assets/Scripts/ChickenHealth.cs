@@ -20,19 +20,15 @@ public class ChickenHealth : MonoBehaviour
     public Animator baranim;
 
     AudioSource speaker;
-    Chickeninput inputmanager;
     public AudioClip clip;
 
     void Start()
     {
         speaker = gameObject.GetComponent<AudioSource>();
-        inputmanager = gameObject.GetComponent<Chickeninput>();
-        username = inputmanager.namestring;
     }
 
     public void TakeDamage(float damage)
     {
-        username = inputmanager.namestring;
         if (invincible == false)
         {
             if (health - damage > 0)
