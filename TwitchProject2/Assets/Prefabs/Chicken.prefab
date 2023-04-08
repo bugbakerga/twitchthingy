@@ -64,7 +64,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: d6d6d678338dbc94b9daed455b73ea89, type: 3}
+  m_Texture: {fileID: 2800000, guid: 7d71541563cccee48bbe719dfc24cf69, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -5332,8 +5332,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0.000057459, y: 0}
-  m_SizeDelta: {x: 252.68854, y: 41.5737}
+  m_AnchoredPosition: {x: 0.000037193, y: 0}
+  m_SizeDelta: {x: 252.68509, y: 41.5737}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &1109103242020736514
 CanvasRenderer:
@@ -5362,7 +5362,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bubhbhkjkbkbjkkkkk
+  m_text: Bkkkkkkkk
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5390,10 +5390,10 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 24.93
+  m_fontSize: 37.2
   m_fontSizeBase: 24.93
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
@@ -5431,7 +5431,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1109103242020736513}
-    characterCount: 18
+    characterCount: 9
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -5770,6 +5770,7 @@ MonoBehaviour:
   - {fileID: 1024441599464044757}
   textDisplay: {fileID: 1109103242020736513}
   chickenHealth: {fileID: 3714068342205552035}
+  user: 
 --- !u!114 &5621897587680649890
 MonoBehaviour:
   m_ObjectHideFlags: 0

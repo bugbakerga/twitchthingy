@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class WinnerText : MonoBehaviour
 {
-    public TextMeshProUGUI huddisplay;
+    public Text huddisplay;
 
     public GameObject copied;
     public Transform copiedposition;
@@ -18,7 +17,7 @@ public class WinnerText : MonoBehaviour
     void Start()
     {
         nameofwinner = WinnerInfo.instance.winnername;
-        huddisplay.text = "Winner!: " + nameofwinner;
+        huddisplay.text = "Winner - " + nameofwinner;
         Destroy(WinnerInfo.instance);
     }
 

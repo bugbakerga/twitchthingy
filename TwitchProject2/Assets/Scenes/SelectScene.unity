@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2249,6 +2249,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1880061744}
     m_Modifications:
+    - target: {fileID: 2215292566069261005, guid: f5a99376b5eb36140aa8f52398f14880,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ff8efa0a0c786114884c7afeec5349d9,
+        type: 3}
     - target: {fileID: 5117061581420574228, guid: f5a99376b5eb36140aa8f52398f14880,
         type: 3}
       propertyPath: m_Name
@@ -2362,7 +2368,7 @@ PrefabInstance:
     - target: {fileID: 6020114911202366792, guid: f5a99376b5eb36140aa8f52398f14880,
         type: 3}
       propertyPath: equipedname
-      value: middle
+      value: sword
       objectReference: {fileID: 0}
     - target: {fileID: 8001327124786784126, guid: f5a99376b5eb36140aa8f52398f14880,
         type: 3}
@@ -2372,7 +2378,7 @@ PrefabInstance:
     - target: {fileID: 8220506382048584939, guid: f5a99376b5eb36140aa8f52398f14880,
         type: 3}
       propertyPath: m_Text
-      value: Middle
+      value: Sword
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5a99376b5eb36140aa8f52398f14880, type: 3}
@@ -2683,8 +2689,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8429a29bf6d42d947bb0bb2d0cdef9a5, type: 3}
-    m_FontSize: 15
+    m_Font: {fileID: 12800000, guid: f44c233aa4b540b4ba7ad83ac25f51d5, type: 3}
+    m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -3855,8 +3861,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8429a29bf6d42d947bb0bb2d0cdef9a5, type: 3}
-    m_FontSize: 16
+    m_Font: {fileID: 12800000, guid: f44c233aa4b540b4ba7ad83ac25f51d5, type: 3}
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -11878,6 +11884,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1880061744}
     m_Modifications:
+    - target: {fileID: 2215292566069261005, guid: f5a99376b5eb36140aa8f52398f14880,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3bf897c9647f1784c8214b8510643c4c,
+        type: 3}
     - target: {fileID: 5117061581420574228, guid: f5a99376b5eb36140aa8f52398f14880,
         type: 3}
       propertyPath: m_Name
@@ -11996,7 +12008,7 @@ PrefabInstance:
     - target: {fileID: 6832708597359979922, guid: f5a99376b5eb36140aa8f52398f14880,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8001327124786784126, guid: f5a99376b5eb36140aa8f52398f14880,
         type: 3}
@@ -13477,6 +13489,9 @@ MonoBehaviour:
     prizeprefab: {fileID: 4770477716086727122, guid: c998cd27ff29c31468170367407b739c,
       type: 3}
   - prefname: chili
+    prizeprefab: {fileID: 4770477716086727122, guid: c998cd27ff29c31468170367407b739c,
+      type: 3}
+  - prefname: sword
     prizeprefab: {fileID: 4770477716086727122, guid: c998cd27ff29c31468170367407b739c,
       type: 3}
   amountofselectedPrizes: 0
@@ -15283,8 +15298,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8429a29bf6d42d947bb0bb2d0cdef9a5, type: 3}
-    m_FontSize: 19
+    m_Font: {fileID: 12800000, guid: f44c233aa4b540b4ba7ad83ac25f51d5, type: 3}
+    m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -15295,7 +15310,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: TitleText
+  m_Text: Full Screen
 --- !u!222 &1377563891
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15780,8 +15795,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8429a29bf6d42d947bb0bb2d0cdef9a5, type: 3}
-    m_FontSize: 19
+    m_Font: {fileID: 12800000, guid: f44c233aa4b540b4ba7ad83ac25f51d5, type: 3}
+    m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -19619,12 +19634,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8429a29bf6d42d947bb0bb2d0cdef9a5, type: 3}
-    m_FontSize: 29
+    m_Font: {fileID: 12800000, guid: f44c233aa4b540b4ba7ad83ac25f51d5, type: 3}
+    m_FontSize: 42
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 42
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
