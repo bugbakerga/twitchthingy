@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82e04541ba732b3418fac290a9102b16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0.05
+  damage: 0.01
   explosion: {fileID: 119685239071289287, guid: 4b558cc52b9a6d6489f1ee172dbb50a7,
     type: 3}
   parentobj: {fileID: 5318644895585678384}

@@ -5807,7 +5807,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chickenHealth: {fileID: 3714068342205552035}
   fire: {fileID: 5323984692949423197}
-  burnDamage: 0.05
+  burnDamage: 0.01
   burndecreaserate: 1
   stat: {fileID: 6138971501807270419}
   statefill: {fileID: 5198532156406763832}
@@ -13842,6 +13842,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 3bf897c9647f1784c8214b8510643c4c,
         type: 3}
+    - target: {fileID: 6138280233805658164, guid: c5abc7a0b5a9fab4084a887e347da494,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6138280233805658164, guid: c5abc7a0b5a9fab4084a887e347da494,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6138280233805658164, guid: c5abc7a0b5a9fab4084a887e347da494,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7184973850239219434, guid: c5abc7a0b5a9fab4084a887e347da494,
         type: 3}
       propertyPath: m_Name
@@ -13868,6 +13883,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 3bf897c9647f1784c8214b8510643c4c,
         type: 3}
+    - target: {fileID: 9124504896255516097, guid: c5abc7a0b5a9fab4084a887e347da494,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9124504896255516097, guid: c5abc7a0b5a9fab4084a887e347da494,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9124504896255516097, guid: c5abc7a0b5a9fab4084a887e347da494,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5abc7a0b5a9fab4084a887e347da494, type: 3}
 --- !u!114 &7613503326507126747 stripped

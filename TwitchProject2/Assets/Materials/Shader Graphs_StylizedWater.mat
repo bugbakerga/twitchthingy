@@ -30,6 +30,6 @@ Material:
     - Vector1_EFACEAC3: 0.1
     - Vector1_F2DEF920: 1
     m_Colors:
-    - Color_69DC6A34: {r: 0, g: 0.49648434, b: 0.6039216, a: 0.7921569}
+    - Color_69DC6A34: {r: 0, g: 0.82467556, b: 1, a: 1}
     - Color_BEEB471D: {r: 1, g: 1, b: 1, a: 1}
-    - Color_ED6A6503: {r: 0, g: 0.8162146, b: 1, a: 0}
+    - Color_ED6A6503: {r: 1, g: 1, b: 1, a: 1}
